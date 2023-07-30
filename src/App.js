@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes, useNavigate } from 'react-router-dom';
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import { AddContact, Contacts, EditContact, ViewContact } from './Component';
 import { ContactContext } from './context/contactContext';
 import { createContact, deleteContact, getAllContacts, getAllGroups } from './services/contactService';
@@ -8,9 +8,6 @@ import { useImmer } from 'use-immer';
 import Navbar from './Component/Navbar';
 import _ from 'lodash';
 import { ToastContainer, toast } from 'react-toastify';
-import Footer from './Component/Footer';
-
-
 
 
 function App() {
@@ -37,7 +34,15 @@ function App() {
       }
     }
     fetchData();
+
+   
   }, []);
+
+
+  // useLayoutEffect(()=> {
+  //   navigate("/");
+  //   console.log('navigate shode');
+  // }, []);
 
   const createContactForm = async(values)=> {
     try{

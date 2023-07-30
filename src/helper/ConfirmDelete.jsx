@@ -15,9 +15,9 @@ export const ConfirmDelete = (contactId, contactFullname, remove)=> {
                     <p style={{color: Foreground}}>مطمئنی که میخای مخاطب {contactFullname} رو پاک کنی ؟</p>
                     <button onClick={()=> {
                       remove(contactId);
-                      onClose(); // onclose ke custom ui khodesh dare.
+                      onClose(); 
                     }} className="btn mx-2" style={{backgroundColor: Purple}}>مطمئن هستم</button>
-                    <button onClick={onClose} style={{backgroundColor: Comment}} className='btn'>  {/* onClose custom UI */}
+                    <button onClick={onClose} style={{backgroundColor: Comment}} className='btn'>  
                       انصراف
                     </button>
                   </div>

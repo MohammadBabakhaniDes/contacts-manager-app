@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const serverUrl = "http://localhost:9000";
-// const serverUrl = "https://contactsapi.mamadbabakhany.ir";
+// const serverUrl = "http://localhost:9000";
+const serverUrl = "https://apic.mamadbabakhany.ir";
 
 export const getAllContacts = ()=> {
     const url = `${serverUrl}/contacts`;

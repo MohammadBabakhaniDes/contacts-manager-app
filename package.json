@@ -1,4 +1,6 @@
+
 {
+  "homepage": "https://MohammadBabakhaniDes.github.io/contacts-manager-app",
   "name": "tamrin",
   "version": "0.1.0",
   "private": true,
@@ -23,6 +25,8 @@
     "yup": "^1.1.1"
   },
   "scripts": {
+    "predeploy": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "start": "concurrently \"react-scripts start\" \"cd server & npm start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -45,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
